@@ -1,0 +1,97 @@
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   background: rgb(240, 240, 240);
+   background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%, rgba(225,225,225,0) 25%, rgba(204,204,204,1) 100%);
+}
+
+.intro {
+   display: flex;
+   flex-direction: column;
+}
+
+.intro-photo {
+   width: 150px;
+   height: 150px;
+   overflow: hidden;
+   border-radius: 50%;
+}
+
+.intro-photo img {
+   width: 140%;
+   position: relative;
+   top: -75px;
+   right: -50px;
+}
+
+.intro-info {
+   text-align: center;
+   margin: 1rem 0;
+   line-height: 1.5rem;
+}
+
+.intro-info-name {
+   color: rgb(50, 50, 50);
+   font-size: 1.1em;
+}
+
+.intro-info-job {
+   color: rgb(100, 100, 100);
+   font-size: 0.9em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.intro-info-job:before {
+   font-size: 1.4em;
+   margin-left: 0.25rem;
+}
+
+.intro-social {
+   display: flex;
+   flex-direction: column;
+   padding-right: 0.5rem;
+   border-right: 1px solid rgb(195, 195, 195);
+   opacity: 0;
+   transform: translateX(40px);
+   transition: opacity 0.5s, transform 0.5s;
+}
+
+.intro-social-show {
+   transition: opacity 0.5s, transform 0.5s;
+   transform: translateX(0);
+   opacity: 1;
+}
+
+.intro-social a {
+   display: flex;
+   align-items: center;
+}
+
+.intro-social a:before {
+   margin-left: 0.25rem;
+   font-size: 1.2em;
+}
+
+.intro-social-email:before {
+   font-size: 1.1em !important;
+}
+
+.intro-social-blog {
+   color: #EAA740;
+}
+
+.intro-social-twitter {
+   color: #41BDEC;
+}
+
+.intro-social-github {
+   color: #7E87A6;
+}
+
+.intro-social-email {
+   color: #93524D;
+}

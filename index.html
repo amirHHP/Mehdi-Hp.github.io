@@ -1,23 +1,99 @@
 ---
-layout: default
 ---
+<html>
+   {% include head.html %}
+   <link rel="stylesheet" href="{{ site.baseurl }}css/index.css">
+   <script type="text/javascript">
+      // Get Browser-Specifc Prefix
+      function getBrowserPrefix() {
 
-<div class="home">
+         // Check for the unprefixed property.
+         if ('hidden' in document) {
+            return null;
+         }
 
-  <h1 class="page-heading">Posts</h1>
+         // All the possible prefixes.
+         var browserPrefixes = ['moz', 'ms', 'o', 'webkit'];
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+         for (var i = 0; i < browserPrefixes.length; i++) {
+            var prefix = browserPrefixes[i] + 'Hidden';
+            if (prefix in document) {
+               return browserPrefixes[i];
+            }
+         }
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+         // The API is not supported in browser.
+         return null;
+      }
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      // Get Browser Specific Hidden Property
+      function hiddenProperty(prefix) {
+         if (prefix) {
+            return prefix + 'Hidden';
+         } else {
+            return 'hidden';
+         }
+      }
 
-</div>
+      // Get Browser Specific Visibility State
+      function visibilityState(prefix) {
+         if (prefix) {
+            return prefix + 'VisibilityState';
+         } else {
+            return 'visibilityState';
+         }
+      }
+
+      // Get Browser Specific Event
+      function visibilityEvent(prefix) {
+         if (prefix) {
+            return prefix + 'visibilitychange';
+         } else {
+            return 'visibilitychange';
+         }
+      }
+      
+      // Get Browser Prefix
+      var prefix = getBrowserPrefix();
+      var hidden = hiddenProperty(prefix);
+      var visibilityState = visibilityState(prefix);
+      var visibilityEvent = visibilityEvent(prefix);
+
+      document.addEventListener(visibilityEvent, function(event) {
+         if (!document[hidden]) {
+            $(".intro-social").addClass("intro-social-show");
+         }
+      });
+      
+      $( document ).ready(function() {
+         if (document.visibilityState == "visible") {
+            $(".intro-social").addClass("intro-social-show");
+         }
+      });
+   </script>
+
+   <body>
+      <main>
+         <div class="intro">
+            <div class="intro-photo">
+               <img src="{{ site.baseurl }}images/mehdi hoseini.jpg">
+            </div>
+            <span class="intro-info">
+                  <p class="intro-info-name">
+                     مهدی حسینی‌پژوه
+                  </p>
+                  <p class="intro-info-job" data-icon="a">
+                     طراح و توسعه دهنده وب
+                  </p>
+               </span>
+            <div class="intro-social">
+               <a class="intro-social-blog" data-icon="e">وبلاگ</a>
+               <a class="intro-social-twitter" data-icon="b">توییتر</a>
+               <a class="intro-social-github" data-icon="d">گیت‌هاب</a>
+               <a class="intro-social-email" data-icon="c">ایمیل</a>
+            </div>
+         </div>
+      </main>
+   </body>
+
+</html>
