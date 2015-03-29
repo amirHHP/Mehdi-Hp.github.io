@@ -3,13 +3,13 @@ main {
    justify-content: center;
    align-items: center;
    height: 100%;
-   background: rgb(240, 240, 240);
-   background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%, rgba(225,225,225,0) 25%, rgba(204,204,204,1) 100%);
+   background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%, rgba(225,225,225,0) 35%, rgb(224, 224, 224) 100%);
 }
 
 .intro {
    display: flex;
    flex-direction: column;
+   perspective: 150px;
 }
 
 .intro-photo {
@@ -17,19 +17,98 @@ main {
    height: 150px;
    overflow: hidden;
    border-radius: 50%;
+   position: relative;
+   transform: rotateX(20deg);
+   animation: introPhoto 2s cubic-bezier(1, 0, .15, 1.37) 5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
 }
 
-.intro-photo img {
-   width: 140%;
+@keyframes introPhoto {
+   0% {
+      transform: rotateX(60deg) translateY(-90px) scale(0);
+      opacity: 0;
+   }
+   100% {
+      transform: rotateX(0deg) translateY(0)  scale(1);
+      opacity: 1;
+   }
+}
+
+.intro-photo-img {
+   width: 130%;
    position: relative;
-   top: -75px;
-   right: -50px;
+   top: -70px;
+   right: -45px;
+   animation: introPhotoImg 0s linear 5s;
+   animation-iteration-count: 1;
+   opacity: 0;
+   animation-fill-mode: forwards;
+}
+
+@keyframes introPhotoImg {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+.intro-photo-border {
+   border-radius: 50%;
+   border-top: 5px solid rgba(255, 255, 255, 0);
+   border-right: 6px solid rgba(255, 255, 255, 0);
+   border-bottom: 6px solid rgba(255, 255, 255, 0);
+   border-left: 6px solid #7C4588;
+   box-sizing: content-box;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   animation: introPhotoBorder 2.5s linear 3s;
+   animation-iteration-count: 1;
+   opacity: 0;
+}
+
+@keyframes introPhotoBorder {
+   0% {
+      transform: rotate(0deg);
+      opacity: 0;
+   }
+   10% {
+      opacity: 0.9;
+   }
+   100% {
+      transform: rotate(1080deg);
+      opacity: 0;
+   }
 }
 
 .intro-info {
    text-align: center;
    margin: 1rem 0;
    line-height: 1.5rem;
+   transform: translateY(120px);
+   opacity: 0;
+   animation: introInfo 1s cubic-bezier(1, 0, .15, 1.37) 5.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+
+@keyframes introInfo {
+   0% {
+      transform: translateY(120px);
+      opacity: 0;
+   }
+   90% {
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
 }
 
 .intro-info-name {
@@ -56,19 +135,44 @@ main {
    padding-right: 0.5rem;
    border-right: 1px solid rgb(195, 195, 195);
    opacity: 0;
-   transform: translateX(40px);
-   transition: opacity 0.5s, transform 0.5s;
+   transform: translateX(150px);
+   animation: introSocial 2s cubic-bezier(1, 0, .15, 1.37) 8s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
 }
 
-.intro-social-show {
-   transition: opacity 0.5s, transform 0.5s;
-   transform: translateX(0);
-   opacity: 1;
+@keyframes introSocial {
+   0% {
+      transform: translateX(150px);
+      opacity: 0;
+   }
+   50% {
+      opacity: 1;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
 }
 
 .intro-social a {
    display: flex;
    align-items: center;
+   animation: introSocial-links 0.3s ease-in-out 8.7s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   opacity: 0;
+}
+
+@keyframes introSocial-links {
+   0% {
+      opacity: 0;
+      transform: translateX(10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
 }
 
 .intro-social a:before {
@@ -80,18 +184,28 @@ main {
    font-size: 1.1em !important;
 }
 
+.intro-social-link {
+   color: rgb(100, 100, 100);
+   transition: color 0.5s;
+}
+
 .intro-social-blog {
    color: #EAA740;
+   transition: color 0.5s 9s;
 }
 
 .intro-social-twitter {
    color: #41BDEC;
+   transition: color 0.5s 9.5s;
 }
 
 .intro-social-github {
    color: #7E87A6;
+   transition: color 0.5s 10s;
 }
 
 .intro-social-email {
    color: #93524D;
+   transition: color 0.5s 10.5s;
 }
+
