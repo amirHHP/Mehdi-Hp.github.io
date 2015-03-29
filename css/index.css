@@ -136,7 +136,7 @@ main {
    border-right: 1px solid rgb(195, 195, 195);
    opacity: 0;
    transform: translateX(150px);
-   animation: introSocial 2s cubic-bezier(1, 0, .15, 1.37) 8s;
+   animation: introSocial 2s cubic-bezier(1, 0, .15, 1.37) 6.5s;
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
 }
