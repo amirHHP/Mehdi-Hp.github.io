@@ -1,12 +1,253 @@
 html {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
 }
+
+h2 {
+   font-size: 1.45rem;
+}
+
+h3 {
+   font-size: 1.2rem;
+}
+
+h4 {
+   font-size: 1rem;
+}
+
+h5 {
+   font-size: 0.8rem;
+   color: rgb(100, 100, 100);
+}
+
 body {
    font-family: Mitra;
    direction: rtl;
    text-align: right;
+}
+
+main {
+   display: flex;
+   background: rgb(245, 245, 245);
+}
+
+.sidebar {
+   width: 350px;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 2vh 1vw;
+   background: #FFF;
+   box-shadow: 0px 1px 7px -4px black;
+   height: 96vh;
+   flex-shrink: 0;
+   border-right: 4px solid rgb(166, 63, 194);
+   border-radius: 3px;
+   position: fixed;
+}
+
+.sidebar-me {
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.sidebar-me-avatar img {
+   width: 100%;
+   border-radius: 50%;
+}
+
+.sidebar-me-info {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   line-height: 1.5;
+}
+
+.sidebar-me-avatar {
+   width: 60%;
+}
+
+.sidebar-me-name {
+   color: rgb(50, 50, 50);
+}
+
+.sidebar-me-job {
+   color: rgb(100, 100, 100);
+   font-size: 0.9em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.sidebar-me-job:before {
+   font-size: 1.3em;
+   margin-left: 0.25rem;
+}
+
+.hire-me {
+   font-size: 1.1rem;
+   text-align: center;
+   margin-top: 1rem;
+   background: rgb(166, 63, 194);
+   color: #fff;
+   padding: 0.8rem 1.5rem;
+   border-radius: 2px;
+   position: relative;
+}
+
+.hire-me:before {
+   position: absolute;
+   content: '';
+   top: 2px;
+   bottom: 2px;
+   right: 2px;
+   left: 2px;
+   border: 1px solid #fff;
+}
+
+.sidebar-social {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 0 5.5vw;
+   margin: 2rem 0;
+   line-height: 1.7;
+   flex-grow: 1;
+   justify-content: center;
+}
+
+.sidebar-social-link {
+   display: flex;
+   align-items: center;
+   color: rgb(50, 50, 50);
+   text-decoration: none;
+}
+
+.sidebar-social-link:before {
+   font-size: 1.2em;
+   margin-left: 0.25rem;
+   width: 1.4rem;
+}
+
+.sidebar-social-email:before {
+   font-size: 1.1em;
+}
+
+.sidebar-hack {
+   width: 350px;
+   margin: 2vh 1vw;
+   height: 96vh;
+   flex-shrink: 0;
+   visibility: hidden;
+}
+
+.posts {
+   flex-grow: 1;
+   padding: 1rem 0 1rem 1rem;
+   font-size: 0.9rem;
+}
+
+.post {
+   background: #FFF;
+   box-shadow: 0px 1px 7px -4px black;
+   padding: 1rem;
+   margin-bottom: 1rem;
+   border-right: 3px solid rgb(215, 215, 215);
+   border-radius: 3px;
+   transition: border-right 0.1s;
+}
+
+.post-hover {
+   border-right: 3px solid #247A53;
+}
+
+.post-header {
+   margin-bottom: 1rem;
+   font-family: Mitra;
+}
+
+.post-link {
+   text-decoration: none;
+   line-height: 1.4;
+   display: block;
+}
+
+.post-link h3 {
+   font-size: 1.4rem;
+   color: rgb(50, 50, 50);
+}
+
+.post-link h4 {
+   color: #BA9B5C;
+}
+
+.post-date {
+   margin-top: 0.7rem;
+   color: rgb(200, 200, 200);
+   direction: ltr;
+}
+
+.post-tags {
+   color: rgb(200, 200, 200);
+   margin-top: 0.3rem;
+}
+
+.post-header h5:before {
+   float: right;
+   margin-left: 0.25rem;
+}
+
+.post-content {
+   line-height: 1.8;
+   color: rgb(50, 50, 50);
+   font-family: IranianSerif, Source sans pro, sans-serif, Arial, Tahoma;
+   letter-spacing: -0.5px;
+}
+
+.highlight {
+   padding: 1rem;
+   background: rgb(50, 70, 70);
+   color: #fff;
+   margin: 1rem 0;
+   direction: ltr;
+   text-align: left;
+   border-radius: 2px;
+}
+
+code {
+   font-family: "ubuntu mono", "monospace";
+}
+
+.footer-hack {
+   flex-grow: 1;
+}
+
+footer {
+   height: 50px;
+   color: rgb(200, 200, 200);
+   font-family: IranianSerif;
+   font-size: 0.8rem;
+}
+
+.power-by {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+footer span {
+   margin-left: 0.5rem;
+}
+
+footer img {
+   height: 100%;
 }
