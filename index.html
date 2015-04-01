@@ -61,13 +61,23 @@
 
       document.addEventListener(visibilityEvent, function(event) {
          if (!document[hidden]) {
+            $(".intro-photo-border").addClass("intro-photo-border-show");
+            $(".intro-photo-img").addClass("intro-photo-img-show");
+            $(".intro-photo").addClass("intro-photo-show");
+            $(".intro-info").addClass("intro-info-show");
             $(".intro-social").addClass("intro-social-show");
+            $(".intro-social-link").addClass("intro-social-link-show");
          }
       });
       
       $( document ).ready(function() {
          if (document.visibilityState == "visible") {
+            $(".intro-photo-border").addClass("intro-photo-border-show");
+            $(".intro-photo-img").addClass("intro-photo-img-show");
+            $(".intro-photo").addClass("intro-photo-show");
+            $(".intro-info").addClass("intro-info-show");
             $(".intro-social").addClass("intro-social-show");
+            $(".intro-social-link").addClass("intro-social-link-show");
          }
       });
    </script>
@@ -76,7 +86,7 @@
       <main>
          <div class="intro">
             <div class="intro-photo">
-               <img class="intro-photo-img" alt="Mehdi HoseiniPajooh" src="{{ site.baseurl }}images/mehdi hoseini.jpg">
+               <img class="intro-photo-img" alt="Mehdi HoseiniPajooh" src="{{ site.avatar }}">
                <div class="intro-photo-border"></div>
             </div>
             <span class="intro-info">
@@ -88,10 +98,10 @@
                   </p>
                </span>
             <div class="intro-social">
-               <a class="intro-social-link intro-social-blog" data-icon="e">وبلاگ</a>
-               <a class="intro-social-link intro-social-twitter" data-icon="b">توییتر</a>
-               <a class="intro-social-link intro-social-github" data-icon="d">گیت‌هاب</a>
-               <a class="intro-social-link intro-social-email" data-icon="c">ایمیل</a>
+               <a class="intro-social-link intro-social-blog" href="blog.html" data-icon="e">وبلاگ</a>
+               <a class="intro-social-link intro-social-twitter" href="https://twitter.com/{{ site.twitter }}" data-icon="b">توییتر</a>
+               <a class="intro-social-link intro-social-github" href="https://github.com/{{ site.github }}" data-icon="d">گیت‌هاب</a>
+               <a class="intro-social-link intro-social-email" href="mailto:{{ site.email }}" data-icon="c">ایمیل</a>
             </div>
          </div>
       </main>
