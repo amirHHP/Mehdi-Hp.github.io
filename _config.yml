@@ -1,7 +1,7 @@
 # Site settings
-title: Mehdi HoseiniPajooh
+title: مهدی حسینی‌پژوه
 email: mehdi.hoseinipajooh@gmail.com
-description: Web Designer and Developer
+description: طراح و توسعه‌دهنده وب
 baseurl: "/"
 url: "http://mehdihp.ir"
 name: مهدی حسینی‌پژوه
@@ -11,8 +11,6 @@ github: https://github.com/Mehdi-Hp
 twitter: https://twitter.com/Mehdi_Hp_
 facebook: https://www.facebook.com/profile.php?id=100001867037114
 instagram: https://instagram.com/mehdi_hp/
-mhp: /images/M-HP.png
-
 
 # Build settings
 markdown: kramdown
@@ -20,6 +18,5 @@ include: ['.htaccess']
 keep_files: ['.git']
 paginate: 8
 paginate_path: /page:num/
-
 gems:
    - jalalidate
