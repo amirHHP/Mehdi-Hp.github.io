@@ -19,7 +19,10 @@ main {
    border-radius: 50%;
    position: relative;
    transform: rotateX(20deg);
-   animation: introPhoto 2s cubic-bezier(1, 0, .15, 1.37) 5s;
+}
+
+.intro-photo-show {
+   animation: introPhoto 2s cubic-bezier(1, 0, .15, 1.37) 4s;
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
 }
@@ -36,13 +39,14 @@ main {
 }
 
 .intro-photo-img {
-   width: 130%;
+   width: 100%;
    position: relative;
-   top: -70px;
-   right: -45px;
+   opacity: 0;
+}
+
+.intro-photo-img-show {
    animation: introPhotoImg 0s linear 5s;
    animation-iteration-count: 1;
-   opacity: 0;
    animation-fill-mode: forwards;
 }
 
@@ -67,9 +71,13 @@ main {
    right: 0;
    bottom: 0;
    left: 0;
-   animation: introPhotoBorder 2.5s linear 3s;
-   animation-iteration-count: 1;
    opacity: 0;
+}
+
+.intro-photo-border-show {
+   animation: introPhotoBorder 2.5s linear 1s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
 }
 
 @keyframes introPhotoBorder {
@@ -81,7 +89,7 @@ main {
       opacity: 0.9;
    }
    100% {
-      transform: rotate(1080deg);
+      transform: rotate(1440deg);
       opacity: 0;
    }
 }
@@ -92,6 +100,9 @@ main {
    line-height: 1.5rem;
    transform: translateY(120px);
    opacity: 0;
+}
+
+.intro-info-show {
    animation: introInfo 1s cubic-bezier(1, 0, .15, 1.37) 5.5s;
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
@@ -134,8 +145,12 @@ main {
    flex-direction: column;
    padding-right: 0.5rem;
    border-right: 1px solid rgb(195, 195, 195);
-   opacity: 0;
    transform: translateX(150px);
+   opacity: 0;
+   line-height: 1.5;
+}
+
+.intro-social-show {
    animation: introSocial 2s cubic-bezier(1, 0, .15, 1.37) 6.5s;
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
@@ -158,10 +173,14 @@ main {
 .intro-social a {
    display: flex;
    align-items: center;
-   animation: introSocial-links 0.3s ease-in-out 8.7s;
+   opacity: 0;
+   transform: translateX(10px);
+}
+
+.intro-social-link-show {
+   animation: introSocial-links 0.3s ease-in-out 8s;
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
-   opacity: 0;
 }
 
 @keyframes introSocial-links {
@@ -184,28 +203,19 @@ main {
    font-size: 1.1em !important;
 }
 
-.intro-social-link {
-   color: rgb(100, 100, 100);
-   transition: color 0.5s;
-}
-
 .intro-social-blog {
    color: #EAA740;
-   transition: color 0.5s 9s;
 }
 
 .intro-social-twitter {
    color: #41BDEC;
-   transition: color 0.5s 9.5s;
 }
 
 .intro-social-github {
    color: #7E87A6;
-   transition: color 0.5s 10s;
 }
 
 .intro-social-email {
    color: #93524D;
-   transition: color 0.5s 10.5s;
 }
 
