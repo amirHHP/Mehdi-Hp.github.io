@@ -2,10 +2,24 @@
 title: Mehdi HoseiniPajooh
 email: mehdi.hoseinipajooh@gmail.com
 description: Web Designer and Developer
-baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://mehdihp.ir" # the base hostname & protocol for your site
+baseurl: "/"
+url: "http://mehdihp.ir"
+name: مهدی حسینی‌پژوه
+job: طراح و توسعه‌دهنده وب
+avatar: /images/mehdi hoseini.jpg
+github: https://github.com/Mehdi-Hp
+twitter: https://twitter.com/Mehdi_Hp_
+facebook: https://www.facebook.com/profile.php?id=100001867037114
+instagram: https://instagram.com/mehdi_hp/
+mhp: /images/M-HP.png
+
 
 # Build settings
 markdown: kramdown
 include: ['.htaccess']
 keep_files: ['.git']
+paginate: 8
+paginate_path: /page:num/
+
+gems:
+   - jalalidate
