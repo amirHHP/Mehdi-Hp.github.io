@@ -4,3 +4,17 @@
    font-weight: bold;
    font-style: normal;
 }
+
+@font-face {
+   font-family: 'IranianSerif';
+   src: url('/fonts/IranianSerifWeb-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Source sans pro';
+   src: url('/fonts/SourceSansPro-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
