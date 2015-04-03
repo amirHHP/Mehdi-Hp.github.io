@@ -1,22 +1,23 @@
 # Site settings
-title: مهدی حسینی‌پژوه
-email: mehdi.hoseinipajooh@gmail.com
-description: طراح و توسعه‌دهنده وب
-baseurl: "/"
-url: "http://mehdihp.ir"
-name: مهدی حسینی‌پژوه
-job: طراح و توسعه‌دهنده وب
-avatar: /images/mehdi hoseini.jpg
-github: https://github.com/Mehdi-Hp
-twitter: https://twitter.com/Mehdi_Hp_
-facebook: https://www.facebook.com/profile.php?id=100001867037114
-instagram: https://instagram.com/mehdi_hp/
+title: 			مهدی حسینی‌پژوه
+email: 			mehdi.hoseinipajooh@gmail.com
+description: 	طراح و توسعه‌دهنده وب
+baseurl: 		"/"
+url: 				"http://mehdihp.ir"
+name: 			مهدی حسینی‌پژوه
+job: 				طراح و توسعه‌دهنده وب
+avatar: 			/images/mehdi hoseini.jpg
+github: 			https://github.com/Mehdi-Hp
+twitter: 		https://twitter.com/Mehdi_Hp_
+facebook: 		https://www.facebook.com/profile.php?id=100001867037114
+instagram: 		https://instagram.com/mehdi_hp/
 
 # Build settings
-markdown: kramdown
-include: ['.htaccess']
-keep_files: ['.git']
-paginate: 8
+markdown: 		kramdown
+include: 		['.htaccess']
+keep_files: 	['.git']
+paginate: 		8
 paginate_path: /page:num/
+permalink:     /blog/:title
 gems:
    - jalalidate
