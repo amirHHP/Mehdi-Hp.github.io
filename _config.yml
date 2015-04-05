@@ -29,7 +29,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      permalink: /blog/:title/
+      permalink: /:year/:month/:day/:title/
 
 gems:
    - jalalidate
