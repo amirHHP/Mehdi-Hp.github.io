@@ -24,12 +24,11 @@ permalink: pretty
 
 # overrides permalink for posts
 defaults:
-	-
-   	scope:
-      	path: ""
-      	type: "posts"
-    	values:
-	      permalink: /blog//:title/
+	scope:
+   	path: ""
+   	type: "posts"
+ 	values:
+      permalink: /blog//:title/
 
 gems:
    - jalalidate
