@@ -1,6 +1,5 @@
 ---
 layout: default
-permalink: blog
 ---
 <section class="posts persiaNumber">
    {% for post in site.posts %}
@@ -14,9 +13,9 @@ permalink: blog
                   {{ post.title }}
                </h3>
             </a>
-            <h5 class="post-date persiaNumber">
-               {{ page.date | jdate: "%A %d %b %Y" }}
-            </h5>
+            <!-- <h5 class="post-date persiaNumber">
+               
+            </h5> -->
          </div>
          <div class="post-content">
             {{ post.expert }}
