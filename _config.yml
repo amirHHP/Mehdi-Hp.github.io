@@ -18,6 +18,18 @@ include: 		['.htaccess']
 keep_files: 	['.git']
 paginate: 		8
 paginate_path: /page:num/
-permalink:     /blog/:title
+
+# applies pretty for all
+permalink: pretty
+
+# overrides permalink for posts
+defaults:
+	-
+   	scope:
+      	path: ""
+      	type: "posts"
+    	values:
+	      permalink: /blog//:title/
+
 gems:
    - jalalidate
