@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<section class="posts persiaNumber">
+   {% for post in site.posts %}
+      <div class="post">
+         <div class="post-header">
+            <a href="{{ post.url }}" class="post-link">
+               <h4>
+                  {{ post.toptitle }}
+               </h4>
+               <h3>
+                  {{ post.title }}
+               </h3>
+            </a>
+            <h5 class="post-date persiaNumber">
+               {{ post.date | date_to_string }}
+            </h5>
+         </div>
+         <div class="post-content">
+            {{ post.expert }}
+         </div>
+      </div>
+   {% endfor %}
+
+   <div class="footer-hack"></div>
+   {% include footer.html %}
+</section>
+
+<script>
+   $(".post-link").each(function() {
+      $(this).hover(function() {
+         $(this).parents(".post").toggleClass("post-hover");
+      });
+   });
+</script>
