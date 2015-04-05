@@ -13,7 +13,7 @@ h2 {
 }
 
 h3 {
-   font-size: 1.2rem;
+   font-size: 1.25rem;
 }
 
 h4 {
@@ -47,7 +47,7 @@ main {
    box-shadow: 0px 1px 7px -4px black;
    height: 96vh;
    flex-shrink: 0;
-   border-right: 4px solid rgb(166, 63, 194);
+   border-right: 4px solid #3C9182;
    border-radius: 3px;
    position: fixed;
 }
@@ -96,7 +96,7 @@ main {
    font-size: 1.1rem;
    text-align: center;
    margin-top: 1rem;
-   background: rgb(166, 63, 194);
+   background: #399E53;
    color: #fff;
    padding: 0.8rem 1.5rem;
    border-radius: 2px;
@@ -127,8 +127,24 @@ main {
 .sidebar-social-link {
    display: flex;
    align-items: center;
-   color: rgb(50, 50, 50);
+   color: #15443C;
    text-decoration: none;
+}
+
+.sidebar-social-twitter:hover {
+   color: #55acee;
+}
+.sidebar-social-github:hover {
+   color: #4183c4;
+}
+.sidebar-social-instagram:hover {
+   color: #3f729b;
+}
+.sidebar-social-facebook:hover {
+   color: #3b5998;
+}
+.sidebar-social-email:hover {
+   color: #febe12;
 }
 
 .sidebar-social-link:before {
@@ -168,7 +184,7 @@ main {
 }
 
 .post-hover {
-   border-right: 3px solid #247A53;
+   border-right: 3px solid #3DA877;
 }
 
 .post-header {
@@ -183,12 +199,11 @@ main {
 }
 
 .post-link h3 {
-   font-size: 1.4rem;
-   color: rgb(50, 50, 50);
+   color: #20423C;
 }
 
 .post-link h4 {
-   color: #BA9B5C;
+   color: #75A39B;
 }
 
 .post-date {
